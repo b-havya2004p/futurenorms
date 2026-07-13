@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     siteName: "FutureNorms",
     images: [
       {
-        url: "/og-image.png",
+        url: "/Futurenorms%20Logo.PNG",
         width: 1200,
         height: 630,
         alt: "FutureNorms Talent Solutions",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     title: "FutureNorms Talent Solutions | Executive Recruitment",
     description:
       "Connecting organizations with exceptional leadership talent.",
-    images: ["/og-image.png"],
+    images: ["/Futurenorms%20Logo.PNG"],
   },
 };
 
