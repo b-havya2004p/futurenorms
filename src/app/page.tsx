@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { LazyMotion, domAnimation, m } from "framer-motion";
 import Link from "next/link";
 
 export default function Home() {
@@ -24,34 +24,13 @@ export default function Home() {
     },
   };
 
-  const pulseVariant = {
-    pulse: {
-      scale: [1, 1.03, 1],
-      transition: {
-        duration: 2,
-        ease: "easeInOut",
-        repeat: Infinity,
-        repeatType: "reverse" as const,
-      },
-    },
-  };
+ 
 
-  return (
+return (
+  <LazyMotion features={domAnimation}>
     <div className="min-h-screen bg-white overflow-hidden">
       <section className="relative pt-28 pb-16 px-4 sm:pt-32 sm:pb-20 sm:px-6 lg:px-8 bg-gradient-to-br from-primary via-primary to-secondary overflow-hidden">
-        <motion.div
-          animate={{
-            y: [0, -20, 0],
-            opacity: [0.3, 0.5, 0.3],
-          }}
-          transition={{
-            duration: 6,
-            ease: "easeInOut",
-            repeat: Infinity,
-            repeatType: "reverse",
-          }}
-          className="absolute top-1/4 left-10 w-24 h-24 bg-accent/20 rounded-full blur-xl"
-        />
+       <div className="absolute top-1/4 left-10 w-24 h-24 bg-accent/20 rounded-full blur-xl" />
         <motion.div
           animate={{
             y: [0, 20, 0],
@@ -402,6 +381,7 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-    </div>
-  );
+   </div>
+</LazyMotion>
+);
 }
