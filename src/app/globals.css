@@ -2,17 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: 'Calibri', sans-serif;
-  background: #ffffff;
-  min-height: 100vh;
+/* Improve scrolling */
+html {
+  scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Trebuchet MS', sans-serif;
+/* Better rendering */
+body {
+  font-family: "Calibri", sans-serif;
+  background: #ffffff;
+  min-height: 100vh;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Trebuchet MS", sans-serif;
 }
 
 .tagline {
-  font-family: 'Georgia', serif;
+  font-family: Georgia, serif;
   font-style: italic;
+}
+
+/* Faster image rendering */
+img {
+  max-width: 100%;
+  height: auto;
 }
